@@ -4,14 +4,18 @@ import com.oliferov.agriculturalstore.data.network.ApiFactory.BASE_URL
 import com.oliferov.agriculturalstore.data.network.model.GoodsDto
 import com.oliferov.agriculturalstore.domain.Goods
 
-class GoodsMapper {
+object GoodsMapper {
 
-    fun mapGoodsDtoToGoods(goodsDto: GoodsDto) = Goods(
+    private fun mapGoodsDtoToGoods(goodsDto: GoodsDto) = Goods(
         name = goodsDto.name,
         price = goodsDto.price,
         article = goodsDto.article,
         image = "$BASE_URL${goodsDto.image}"
     )
+
+    fun mapGoodsDtoListToGoodsList(list: List<GoodsDto>) = list.map {
+        mapGoodsDtoToGoods(it)
+    }
 
 
 }
