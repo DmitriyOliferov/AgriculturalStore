@@ -19,7 +19,7 @@ class GoodsRepositoryImpl() : GoodsRepository {
                 GoodsMapper.mapGoodsDtoListToGoodsList(it)
             }
             .subscribeOn(Schedulers.io())
-//            .observeOn(AndroidSchedulers.mainThread())
+            .observeOn(AndroidSchedulers.mainThread())
             .subscribe({
                 Log.d("TEST_OF_LOADING_DATA", "Success: $it")
                 result.value = it

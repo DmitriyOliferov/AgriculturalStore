@@ -18,7 +18,7 @@
             android:name=".presentation.GoodsListActivity"
             android:exported="true" />
         <activity
-            android:name=".presentation.StartActivity"
+            android:name=".presentation.activity.MainActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

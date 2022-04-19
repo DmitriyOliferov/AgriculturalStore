@@ -13,7 +13,7 @@ interface ApiService{
 fun getAllGoods(): Single<List<GoodsDto>>
 
 companion object{
-    private const val END_POINT = ":1457/products?cat_id=869&limit=10&offset=0&base_id=1&sort_type=1"
+    private const val END_POINT = "products?cat_id=869&limit=10&offset=0&base_id=1&sort_type=1"
 
 }
 }

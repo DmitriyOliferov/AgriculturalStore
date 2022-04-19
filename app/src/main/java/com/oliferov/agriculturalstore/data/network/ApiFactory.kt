@@ -6,7 +6,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object ApiFactory {
 
-    const val BASE_URL = "https://vimos.ru"
+    const val BASE_URL = "https://vimos.ru:1457/"
 
     private val retrofit= Retrofit.Builder()
         .addCallAdapterFactory(RxJava2CallAdapterFactory.create())

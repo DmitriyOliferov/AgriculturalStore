@@ -1,6 +1,5 @@
 package com.oliferov.agriculturalstore.data.mapper
 
-import com.oliferov.agriculturalstore.data.network.ApiFactory.BASE_URL
 import com.oliferov.agriculturalstore.data.network.model.GoodsDto
 import com.oliferov.agriculturalstore.domain.Goods
 
@@ -17,5 +16,5 @@ object GoodsMapper {
         mapGoodsDtoToGoods(it)
     }
 
-
+    private const val BASE_URL = "https://vimos.ru"
 }
