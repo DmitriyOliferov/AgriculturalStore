@@ -1,7 +1,8 @@
-package com.oliferov.agriculturalstore
+package com.oliferov.agriculturalstore.presentation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.oliferov.agriculturalstore.R
 
 class StartActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
