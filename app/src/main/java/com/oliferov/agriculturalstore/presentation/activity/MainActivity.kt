@@ -15,10 +15,11 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
-
-        supportFragmentManager
-            .beginTransaction()
-            .replace(R.id.fragment_container, StartFragment.newInstance())
-            .commit()
+        if (savedInstanceState == null) {
+            supportFragmentManager
+                .beginTransaction()
+                .replace(R.id.fragment_container, StartFragment.newInstance())
+                .commit()
+        }
     }
 }

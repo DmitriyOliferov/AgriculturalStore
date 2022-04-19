@@ -40,7 +40,7 @@ class GoodsListFragment: Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         viewModel = GoodsViewModel(repository)
-        val adapter = GoodsAdapter()
+        val adapter = GoodsAdapter(requireContext())
         adapter.onGoodsClickListener = object : GoodsAdapter.OnGoodsClickListener {
             override fun onGoodsClick(goods: Goods) {
                 requireActivity().supportFragmentManager

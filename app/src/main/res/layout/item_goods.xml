@@ -3,11 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_margin="20dp"
+    android:elevation="20dp"
+    app:cardCornerRadius="20dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@android:color/darker_gray">
 
 
         <ImageView
@@ -28,22 +32,25 @@
             app:layout_constraintTop_toTopOf="@id/iv_goods">
 
             <TextView
+                style="@style/ListTextStyle"
                 android:id="@+id/tv_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                tools:text="Руда" />
 
             <TextView
+                style="@style/ListTextStyle"
                 android:id="@+id/tv_price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                tools:text="@string/price_list" />
 
             <TextView
+                style="@style/ListTextStyle"
                 android:id="@+id/tv_article"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                tools:text="@string/article_list" />
 
         </LinearLayout>
 

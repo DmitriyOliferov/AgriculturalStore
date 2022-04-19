@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.bumptech.glide.Glide
+import com.oliferov.agriculturalstore.R
 import com.oliferov.agriculturalstore.data.repository.GoodsRepositoryImpl
 import com.oliferov.agriculturalstore.databinding.FragmentDetailsBinding
 import com.oliferov.agriculturalstore.domain.Goods
@@ -42,9 +43,9 @@ class DetailFragment : Fragment() {
         val goods = getGoodsInArgs()
         with(binding) {
             with(goods) {
-                tvName.text = name
-                tvPrice.text = "$price"
-                tvArticle.text = "$article"
+                tvName.text = String.format(getString(R.string.name_goods), name)
+                tvPrice.text = String.format(getString(R.string.price_list), price)
+                tvArticle.text = String.format(getString(R.string.article_list), article)
                 Glide.with(requireActivity()).load(image).into(ivGoods)
             }
         }
@@ -57,7 +58,7 @@ class DetailFragment : Fragment() {
         super.onDestroy()
     }
 
-    private fun getGoodsInArgs(): Goods = requireArguments().getSerializable(EXTRA_GOODS) as Goods
+    private fun getGoodsInArgs()= requireArguments().getSerializable(EXTRA_GOODS) as Goods
 
     companion object {
 
