@@ -29,13 +29,4 @@ class GoodsRepositoryImpl() : GoodsRepository {
         return result
     }
 
-    override fun getGoods(article: Int): LiveData<Goods> {
-        return MutableLiveData<Goods>()
-    }
-
-    override fun loadData() {
-        TODO("Not yet implemented")
-    }
-
-
 }

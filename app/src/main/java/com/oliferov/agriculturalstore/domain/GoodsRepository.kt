@@ -6,7 +6,4 @@ interface GoodsRepository {
 
     fun getGoodsList(): LiveData<List<Goods>>
 
-    fun getGoods(article: Int): LiveData<Goods>
-
-    fun loadData()
 }
